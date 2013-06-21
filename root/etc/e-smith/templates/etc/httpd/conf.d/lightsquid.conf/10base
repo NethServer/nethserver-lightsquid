@@ -1,0 +1,31 @@
+{
+    # no collectd-web variable prefilled because the minus character
+    use esmith::ConfigDB;
+    use esmith::util;
+    my $confdb = esmith::ConfigDB->open;
+
+    my $alias = $lightsquid{'alias'} || "";
+
+    # initialize alias if needed
+    if ($alias eq "") {
+        $alias = esmith::util::genRandomHash();
+        $confdb->set_prop('lightsquid','alias',$alias);
+    }
+
+
+    $OUT = "
+<IfModule !cgi_module>
+    LoadModule cgi_module modules/mod_cgi.so
+</IfModule>
+
+Alias /$alias /usr/share/lightsquid/cgi
+
+<Directory /usr/share/lightsquid/cgi>
+    DirectoryIndex index.cgi
+    Options ExecCGI
+    AddHandler cgi-script .cgi
+    AllowOverride None
+</Directory>
+
+";
+}

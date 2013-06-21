@@ -1,0 +1,44 @@
+Summary: NethServer web access statistics
+Name: nethserver-lightsquid
+Version: @@VERSION@@
+Release: @@RELEASE@@
+License: GPL
+Source: %{name}-%{version}.tar.gz
+BuildArch: noarch
+URL: https://dev.nethesis.it/projects/%{name}
+
+BuildRequires: nethserver-devtools
+
+AutoReq: no
+Requires: nethserver-httpd
+Requires: nethserver-squid
+
+%description
+NethServer web access statistics
+See: http://lightsquid.sourceforge.net/
+
+%prep
+%setup
+
+%post
+
+%preun
+
+%build
+perl createlinks
+
+%install
+rm -rf $RPM_BUILD_ROOT
+(cd root   ; find . -depth -print | cpio -dump $RPM_BUILD_ROOT)
+
+%{genfilelist} $RPM_BUILD_ROOT > e-smith-%{version}-filelist
+echo "%doc COPYING"          >> e-smith-%{version}-filelist
+
+%clean 
+rm -rf $RPM_BUILD_ROOT
+
+%files -f e-smith-%{version}-filelist
+%defattr(-,root,root)
+
+%changelog
+
