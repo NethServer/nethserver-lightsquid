@@ -12,7 +12,7 @@ BuildRequires: nethserver-devtools
 AutoReq: no
 Requires: nethserver-httpd
 Requires: nethserver-squid
-Requires: lightsquid
+Requires: lightsquid, lightsquid-apache
 
 %description
 NethServer web access statistics
