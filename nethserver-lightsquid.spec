@@ -1,7 +1,7 @@
 Summary: NethServer web access statistics
 Name: nethserver-lightsquid
-Version: @@VERSION@@
-Release: @@RELEASE@@
+Version: 1.0.2
+Release: 1
 License: GPL
 Source: %{name}-%{version}.tar.gz
 BuildArch: noarch
