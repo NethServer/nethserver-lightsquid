@@ -1,0 +1,35 @@
+#contributor: nethesis
+#specialy for squid with turned on user authentication
+#fallback to dns
+
+use Socket;
+
+sub StartIp2Name() {
+}
+
+sub Ip2Name($$$) {
+  # $Lhost,$user,$Ltimestamp
+  my $Lhost=shift;
+  my $user =shift;
+  $user    =URLDecode($user); #decode user name
+  return $user if ($user ne "-");
+
+  my $ip = $Lhost;
+  if (!defined $hIP{$ip}) {
+
+    my $iaddr = inet_aton($ip);
+    my $user = scalar gethostbyaddr($iaddr, AF_INET);
+
+    # if gethostbyaddr failed to get host, use ip
+    $user=$ip unless (defined $user);
+
+    $hIP{$ip}=$user;
+  }
+  return $hIP{$ip};
+}
+
+sub StopIp2Name() {
+}
+
+#warning !!!
+1;
