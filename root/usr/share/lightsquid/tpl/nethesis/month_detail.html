@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- LightSquid TPL v1.7 -->
+<html>
+<head>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="generator" content="LightSquid - http://lightsquid.sf.net">
+  <meta charset="##MSG_CODEPAGE##">
+  ##META##
+  <title>LightSquid :: Whole Month User Report</title>
+  <link rel="stylesheet" href="/lightsquid/nethesis/css/main.css">
+</head>
+
+<body>
+  <div class="head">Rapporto accesso utenti Squid</div>
+  <div class="main">
+    <div class="caption">
+        <!--<div>
+          <a href="index.cgi">##MSG_HEADER##</a>
+        </div> -->
+        <div class="period">
+          ##MSG_WORK_PERIOD##: ##DATE##
+        </div>
+    </div>
+
+    <table class="stats">
+      <tbody>
+        <tr>
+          <th>##MSG_NUM##</th>
+<!-- HIDE timereport start-->
+          <th>##MSG_TIME_REPORT##</th>
+<!-- HIDE timereport end-->
+<!-- HIDE graphreport start-->
+          <th>##MSG_GRAPH_REPORT##</th>
+<!-- HIDE graphreport end-->
+<!-- HIDE monthreport start-->
+          <th>##MSG_MONTH##</th>
+<!-- HIDE monthreport end-->
+          <th>##MSG_USER##</th>
+<!-- HIDE realname start-->
+          <th>##MSG_REALNAME##</th>
+<!-- HIDE realname end-->
+          <th>##MSG_CONNECT##</th>
+          <th>##MSG_BYTES##</th>
+          <th>%</th>
+          <th>##MSG_CUMULATIVE##</th>
+        </tr>
+
+<!-- [[ user start-->
+        <tr ##ROWATTR##>
+          <td>##USERNUM##</td>
+<!-- HIDE timereport start-->
+          <td><a href="##TIMEURL_L##"><img src="get.cgi?png=datetime" border="0" title="Graph Report"></a></td>
+<!-- HIDE timereport end-->
+<!-- HIDE graphreport start-->
+  <td><a href="##GRAPHURL_L##"><img src="get.cgi?png=graph" border="0" title="Graph Report"></a></td>
+<!-- HIDE graphreport end-->
+<!-- HIDE monthreport start-->
+          <td><a href="##USERMONTHURL_L##">##USERMONTHURL_B##</a></td>
+<!-- HIDE monthreport end-->
+          <td><a href="##USERURL_L##">##USERURL_B##</a></td>
+<!-- HIDE realname start-->
+          <td>##REALNAME##</td>
+<!-- HIDE realname end-->
+          <td class="numeric">##USERCONNECT##</td>
+          <td class="numeric">##USERBYTES##</td>
+          <td class="numeric">##USERPERCENT##%</td>
+          <td class="numeric">##ALLUSERTOTAL##</td>
+        </tr>
+<!-- ]] user end-->
+      </tbody>
+    </table>
+</body>
+</html>

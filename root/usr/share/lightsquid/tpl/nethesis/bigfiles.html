@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!-- LightSquid TPL v1.7 -->
+<html>
+<head>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="generator" content="LightSquid - http://lightsquid.sf.net">
+  <meta charset="##MSG_CODEPAGE##">
+  ##META##
+  <title>LightSquid :: Big Files Report</title>
+  <link rel="stylesheet" href="/lightsquid/nethesis/css/main.css">
+</head>
+
+<body>
+  <div class="head">Rapporto accesso utenti Squid</div>
+  <div class="main">
+    <div class="caption">
+      <div>
+        ##MSG_BIG_FILE_DOWNLOAD_REPORT##
+      </div>
+        <!--<div>
+          <a href="index.cgi">##MSG_HEADER##</a>
+        </div> -->
+        <div class="period">
+          ##MSG_DATE##: ##DATE##
+        </div>
+    </div>
+
+    <table>
+      <tbody>
+<!-- HIDE reportuser start-->		  
+        <tr>
+          <th>##MSG_USER##: ##REPORTUSER##</th>
+        </tr>
+<!-- HIDE reportuser end-->		  
+      </tbody>
+    </table>
+
+    <table class="stats">
+      <tbody>
+        <tr>
+          <th>##MSG_NUM##</th>
+          <th>##MSG_TIME##</th>
+          <th>##MSG_USER##</th>
+          <th>##MSG_SIZE##</th>
+          <th>##MSG_URL##</th>
+        </tr>
+
+<!-- [[ bigfile start-->
+        <tr ##ROWATTR##>
+          <td>##BFILENUM##</td>
+          <td>##BFILETIME##</td>
+          <td><a href="##BFILEUSER_L##">##BFILEUSER_B##</a></td>
+          <td class="numeric">##BFILESIZE##</td>
+          <td>##BFILELINK##</td>
+        </tr>
+<!-- ]] bigfile end-->
+      
+      </tbody>
+    </table>
+</body>
+</html>

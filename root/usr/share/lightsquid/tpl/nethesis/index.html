@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- LightSquid TPL v1.7 -->
+
+<html>
+<head>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="generator" content="LightSquid - http://lightsquid.sf.net">
+  <meta charset="##MSG_CODEPAGE##">
+  ##META##
+  <title>LightSquid :: Index</title>
+  <link rel="stylesheet" href="/lightsquid/nethesis/css/main.css">
+</head>
+
+<body>
+  <div class="head">Statistiche Lightsquid</div>
+  <div class="main">
+    <div class="caption">
+        <!--<div>
+          <a href="index.cgi">##MSG_HEADER##</a>
+        </div> -->
+        <div class="period">
+          ##MSG_WORK_PERIOD##: ##WORKPERIOD##
+        </div>
+    </div>
+
+    <table class="year">
+      <tbody>
+  <!-- VARIABLE yearselected bgcolor="khaki" -->
+        <tr>
+          <!-- [[ year start-->
+          <td class="year" colspan="##YEARCOLSPAN##" ##YEARSELECTED##>
+            <div>
+  <a href="##YEARURL_L##">##YEARURL_B##</a><br>
+            </div>
+          </td>
+  <!-- ]] year end-->
+        </tr>
+
+  <!-- VARIABLE monthselected bgcolor="khaki" -->
+        <tr>
+          <!-- [[ month start-->
+          <td ##MONTHSELECTED##><a href="##MONTHURL_L##">##MONTHURL_B##</a></td>
+  <!-- ]] month end-->
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="top">
+      <tbody>
+        <tr>
+          <th>##MSG_TOP_SITES##</th>
+          <th>##MSG_TOTAL##</th>
+          <th>##MSG_GROUP##</th>
+        </tr>
+
+        <tr>
+          <td><a href="##TOP_YEAR_L##">##TOP_YEAR_B##</a></td>
+          <td><a href="##TOTAL_YEAR_L##">##TOTAL_YEAR_B##</a></td>
+          <td><a href="##GROUP_YEAR_L##">##GROUP_YEAR_B##</a></td>
+        </tr>
+
+        <tr>
+          <!-- HIDE monthtop start -->
+          <td><a href="##TOP_MONTH_L##">##TOP_MONTH_B##</a></td>
+          <td>
+  <a href="##TOTAL_MONTH_L##">##TOTAL_MONTH_B##</a> 
+              <!-- HIDE graph start -->
+  <a href="##MONTH_GRAPH_L##"><img src="get.cgi?png=graph" border="0" title="Graph Report"></a>
+  <!-- HIDE graph end -->
+  </td>
+          <td><a href="##GROUP_MONTH_L##">##GROUP_MONTH_B##</a></td>
+  <!-- HIDE monthtop end -->
+        </tr>
+      </tbody>
+    </table>
+
+    <table class="stats">
+      <tbody>
+        <tr>
+          <th>##MSG_DATE##</th>
+    <!-- HIDE group start -->
+          <th>##MSG_GROUP##</th>
+    <!-- HIDE group end -->
+          <th>##MSG_USERS##</th>
+    <!-- HIDE oversize start -->
+          <th>##MSG_OVERSIZE##</th>
+    <!-- HIDE oversize end -->
+          <th>##MSG_BYTES##</th>
+          <th>##MSG_AVERAGE##</th>
+          <th>##MSG_HIT%##</th>
+        </tr>
+
+  <!-- VARIABLE oddattr-->
+        <!-- VARIABLE evenattr-->
+        <!-- VARIABLE sundayattr-->
+        <!-- VARIABLE saturdayattr bgcolor="#F0EFC7" -->
+        
+  <!-- [[ day start-->
+        <tr ##DAYATTR##>
+          <td><a href="##DAYDATE_L##">##DAYDATE_B##</a></td>
+    <!-- HIDE group start -->
+          <td><a href="##DAYGROUP_L##">##DAYGROUP_B##</a></td>
+    <!-- HIDE group end -->
+          <td class="numeric">##DAYUSERS##</td>
+    
+    <!-- HIDE oversize start-->
+          <td class="numeric"><a href="##DAYOVERUSERS_L##">##DAYOVERUSERS_B##</a></td>
+    <!-- HIDE oversize end-->
+          <td class="numeric">##DAYBYTES##</td>
+          <td class="numeric">##DAYAVERAGE##</td>
+          <td class="numeric">##DAYCACHEHIT##%</td>
+        </tr>
+  <!-- ]] day end-->
+
+        <tr>
+          <td>##MSG_TOTAL_AVERAGE##:</td>
+    <!-- HIDE group start -->
+          <td></td>
+    <!-- HIDE group end -->
+          <td class="numeric">##USERAVERAGE##</td>
+    <!-- HIDE oversize start-->
+          <td class="numeric">##OVERUSERAVERAGE##</td>
+    <!-- HIDE oversize end -->
+          <td class="numeric"><a href="##TOTAL_L##">##TOTAL_B##</a></td>
+          <td class="numeric">##TOTALAVERAGE##</td>
+          <td class="numeric">##AVERAGEHIT##%</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
