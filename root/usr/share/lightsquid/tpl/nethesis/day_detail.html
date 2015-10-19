@@ -62,13 +62,13 @@
 <!-- VARIABLE !putpostwarningattr color="red"   -->
 
 <!-- VARIABLE putpostnormalattr  </> -->
-<!-- VARIABLE putpostwarningattr <img src="get.cgi?png=flag_red" border="0" title="Graph Report">  -->
+<!-- VARIABLE putpostwarningattr <img src="get.cgi?png=flag_red" title="Graph Report">  -->
 
 <!-- [[ user start-->
         <tr ##ROWATTR##>
           <td>##USERNUM##</td>
 <!-- HIDE timereport start-->		  
-<td align="center"><a href="##TIMEURL_L##"><img src="get.cgi?png=datetime" border="0" title="Graph Report"></a></td>
+<td><a href="##TIMEURL_L##"><img src="get.cgi?png=datetime" title="Graph Report"></a></td>
 <!-- HIDE timereport end-->		  
           <td><a href="##USERURL_L##">##USERURL_B##</a></td>
 <!-- HIDE realname start-->		  
@@ -87,5 +87,6 @@
 <!-- ]] user end-->
       </tbody>
     </table>
+  </div>
 </body>
 </html>
