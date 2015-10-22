@@ -99,10 +99,10 @@ $DecOutType="class";
 $decdelimiter        = " ";
 
 #if you dont need Group mode, do =0
-$showgrouplink	     = 1;
+$showgrouplink	     = 0;
 
 #if not zero, groups look like "01. Group1", if zero - "Group1"
-$showgroupid         = 1;
+$showgroupid         = 0;
 
 #if you dont need oversize report , do =0
 $showoversizelink    = 1;
@@ -114,7 +114,7 @@ $putpostwarninglevel =15;
 
 #use or not .realname files 
 #.realname contain pair userid -> Full User Name
-$userealname         = 1;
+$userealname         = 0;
 
 #if url size exceed $bigfilelimit - add this file into report
 {
