@@ -43,7 +43,6 @@ table tr td.numeric {
 
 .main {
   margin: 0 9%;
-  border: 1px dotted #ccc;
   overflow: hidden;
   padding: 1em;
 }

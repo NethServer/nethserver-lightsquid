@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!DOCTYPE html>
 <!-- LightSquid TPL v1.7 -->
 <html>
 <head>
@@ -7,86 +7,56 @@
   <meta http-equiv="Content-Type" content="text/html; charset=##MSG_CODEPAGE##">
   ##META##
   <title>LightSquid :: User Detail</title>
+  <link rel="stylesheet" href="get.cgi?css=main">
 </head>
 
-<body background="" bgcolor="white" text="black">
-  <center>
-    <table cellpadding="0" cellspacing="0">
+<body>
+<div class="head">Dettagli Utente</div>
+  <div class="main">
+    <table class="stats">
       <tbody>
         <tr>
-          <th colspan="2" align="center"><a href="index.cgi">##MSG_HEADER##</a></th>
+          <td class="head">##MSG_USER##:</td>
+          <td class="head">##USER##</td>
         </tr>
-
-        <tr>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td></td>
-        </tr>
-      </tbody>
-    </table>
-  </center>
-
-  <center>
-    <table cellpadding="0" cellspacing="0">
-      <tbody>
-        <tr>
-          <td align="right" bgcolor="blanchedalmond"><font size="-1">##MSG_USER##:</font></td>
-          <td align="center" bgcolor="beige"><font color="red" size="+1">&nbsp;##USER##</font></td>
-        </tr>
-
 <!-- HIDE group start -->
         <tr>
-          <td align="center" bgcolor="blanchedalmond"><font size="-1">##MSG_GROUP##:</font></td>
-          <td align="left" bgcolor="beige"><font size="-1">&nbsp;<b>##GROUP##</b></font></td>
+          <td>##MSG_GROUP##:</td>
+          <td>##GROUP##</td>
         </tr>
 <!-- HIDE group end -->
 
         <tr>
-          <td align="center" bgcolor="blanchedalmond"><font size="-1">##MSG_DATE##:</font></td>
-          <td align="left" bgcolor="beige"><font size="-1">&nbsp;<b>##WORKPERIOD##</b></font></td>
+          <td>##MSG_DATE##:</td>
+          <td>##WORKPERIOD##</td>
         </tr>
 
-        <tr>
-	  <td> </td>
-        </tr>
 <!-- HIDE timereport start-->
-        <tr>
-          <td colspan="2" align="center" ><font size="-1"><A HREF="##TIMEURL_L##"><img src="get.cgi?png=datetime" border="0" title="Graph Report"></A></font></td>
+        <tr style="background-color:transparent; border: 0px;">
+          <td colspan="2" align="center" style="background-color:transparent; border: 0px;" ><A HREF="##TIMEURL_L##"><img src="get.cgi?png=datetime" border="0" title="Graph Report"></A></td>
         </tr>
 <!-- HIDE timereport end-->
-        <tr>
-          <td colspan="11"><font size="-1"><A HREF="##BIGFILESURL_L##">##BIGFILESURL_B##</A></font></td>
-        </tr>
+
       </tbody>
     </table>
-  </center>
-
-  <center>
-    <table cellpadding="0" cellspacing="3">
+    <table class="stats">
       <tbody>
         <tr>
-          <td></td>
-
-          <td></td>
+          <th align="left">##MSG_TOTAL##</th>
+          <th align="right"></th>
+          <th align="right"></th>
+          <th align="right" nowrap="true">##TOTAL##</th>
+          <th align="right"></th>
+          <th align="right"></th>
         </tr>
 
         <tr>
-          <th align="left" ><font color="darkblue" size="-1">##MSG_TOTAL##</font></th>
-          <th>&nbsp</th>
-          <th>&nbsp</th>
-          <th align="right" nowrap="true"><font color="darkblue" size="-1">##TOTAL##</font></th>
-          <th></th>
-        </tr>
-
-        <tr>
-          <th bgcolor="blanchedalmond"><font color="darkblue" size="-1">##MSG_NUM##</font></th>
-          <th bgcolor="blanchedalmond"><font color="darkblue" size="-1">##MSG_ACCESSED_SITE##</font></th>
-          <th bgcolor="blanchedalmond"><font color="darkblue" size="-1">##MSG_CONNECT##</font></th>
-          <th bgcolor="blanchedalmond"><font color="darkblue" size="-1">##MSG_BYTES##</font></th>
-          <th bgcolor="blanchedalmond"><font color="darkblue" size="-1">##MSG_CUMULATIVE##</font></th>
-          <th bgcolor="blanchedalmond"><font color="darkblue" size="-1">%</font></th>
+          <th>##MSG_NUM##</th>
+          <th>##MSG_ACCESSED_SITE##</th>
+          <th>##MSG_CONNECT##</th>
+          <th>##MSG_BYTES##</th>
+          <th>##MSG_CUMULATIVE##</th>
+          <th>%</th>
         </tr>
 
 
@@ -95,36 +65,34 @@
 <!-- VARIABLE oddattr bgcolor="cornsilk" -->
 
 <!-- [[ site start-->
-        <tr ##ROWATTR##>
+        <tr>
           <td align="right">##NUM##</td>
           <td align="left"><A HREF="##SITEURL_L##">##SITEURL_B##</A></td>
-          <td align="right" nowrap="true"><font size="-1">##SITECONNECT##</font></td>
-          <td align="right" nowrap="true"><font size="-1">##SITEBYTES##</font></td>
-          <td align="right" nowrap="true"><font size="-2">##SITETOTAL##</font></td>
-          <td align="right" nowrap="true"><font size="-1">##SITEPERCENT##%</font></td>
+          <td align="right" nowrap="true">##SITECONNECT##</td>
+          <td align="right" nowrap="true">##SITEBYTES##</td>
+          <td align="right" nowrap="true"><font size="-2">##SITETOTAL##</td>
+          <td align="right" nowrap="true">##SITEPERCENT##%</td>
         </tr>
 <!-- ]] site end-->
         <tr>
-          <td></td>
         </tr>
-
+        
         <tr>
-          <td></td>
-        </tr>
-
-        <tr>
-          <th align="left" bgcolor="blanchedalmond"><font color="darkblue" size="-1">##MSG_TOTAL##</font></th>
-          <th align="right" bgcolor="blanchedalmond"></th>
-          <th align="right" bgcolor="blanchedalmond"></th>
-          <th align="right" nowrap="true" bgcolor="blanchedalmond"><font color="darkblue" size="-1">##TOTAL##</font></th>
-          <th align="right" bgcolor="blanchedalmond"></th>
-          <th align="right" bgcolor="blanchedalmond"></th>
-          <th></th>
+          <th align="left">##MSG_TOTAL##</th>
+          <th align="right"></th>
+          <th align="right"></th>
+          <th align="right" nowrap="true">##TOTAL##</th>
+          <th align="right"></th>
+          <th align="right"></th>
         </tr>
       </tbody>
     </table>
-  </center>
-  <hr>
-  ##COPYRIGHT##
 </body>
 </html>
+
+
+
+
+
+
+

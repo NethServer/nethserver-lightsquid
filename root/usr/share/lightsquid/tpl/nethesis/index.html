@@ -50,13 +50,17 @@
         <tr>
           <th>##MSG_TOP_SITES##</th>
           <th>##MSG_TOTAL##</th>
+    <!-- HIDE group start -->
           <th>##MSG_GROUP##</th>
+    <!-- HIDE group end -->
         </tr>
 
         <tr>
           <td><a href="##TOP_YEAR_L##">##TOP_YEAR_B##</a></td>
           <td><a href="##TOTAL_YEAR_L##">##TOTAL_YEAR_B##</a></td>
+    <!-- HIDE group start -->
           <td><a href="##GROUP_YEAR_L##">##GROUP_YEAR_B##</a></td>
+    <!-- HIDE group end -->
         </tr>
 
         <tr>
@@ -68,7 +72,9 @@
   <a href="##MONTH_GRAPH_L##"><img src="get.cgi?png=graph" border="0" title="Graph Report"></a>
   <!-- HIDE graph end -->
   </td>
+    <!-- HIDE group start -->
           <td><a href="##GROUP_MONTH_L##">##GROUP_MONTH_B##</a></td>
+        <!-- HIDE group end -->
   <!-- HIDE monthtop end -->
         </tr>
       </tbody>
@@ -113,17 +119,17 @@
   <!-- ]] day end-->
 
         <tr>
-          <td>##MSG_TOTAL_AVERAGE##:</td>
+          <th align="left">##MSG_TOTAL_AVERAGE##:</th>
     <!-- HIDE group start -->
-          <td></td>
+          <th></th>
     <!-- HIDE group end -->
-          <td class="numeric">##USERAVERAGE##</td>
+          <th align="right">##USERAVERAGE##</th>
     <!-- HIDE oversize start-->
-          <td class="numeric">##OVERUSERAVERAGE##</td>
+          <th align="right">##OVERUSERAVERAGE##</th>
     <!-- HIDE oversize end -->
-          <td class="numeric"><a href="##TOTAL_L##">##TOTAL_B##</a></td>
-          <td class="numeric">##TOTALAVERAGE##</td>
-          <td class="numeric">##AVERAGEHIT##%</td>
+          <th align="right"><a href="##TOTAL_L##">##TOTAL_B##</a></th>
+          <th align="right">##TOTALAVERAGE##</th>
+          <th align="right">##AVERAGEHIT##%</th>
         </tr>
       </tbody>
     </table>
