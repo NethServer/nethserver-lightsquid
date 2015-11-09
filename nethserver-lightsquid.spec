@@ -1,6 +1,6 @@
 Summary: NethServer web access statistics for Enterprise
 Name: nethserver-lightsquid-enterprise
-Version: 1.0.3
+Version: 1.0.4
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
