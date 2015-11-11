@@ -12,6 +12,17 @@ body {
 
 a {
   text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+a:visited{
+  text-decoration: none;
+  color: #363636;
 }
 
 table {
@@ -24,7 +35,7 @@ table tr td {
 }
 
 table tr th {
-  background-color: #88b8c6;
+  background-color: #95a8ad;
   border: 1px solid #aaa;
   font-weight: bold;
 }
@@ -38,7 +49,7 @@ table tr td.numeric {
   margin: 0 9%;
   font-size: 24px;
   font-weight: bold;
-  color: darkolivegreen;
+  color: #525252;
 }
 
 .main {
@@ -72,11 +83,11 @@ table.stats {
 }
 
 table.stats tr:nth-child(2n+1) {
-  background-color: #efc;
+  background-color: #c9dce1;
 }
 
 table.stats tr:last-child {
-  background-color: beige;
+  background-color: #95a8ad;
 }
 
 .period {
