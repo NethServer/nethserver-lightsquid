@@ -1,6 +1,6 @@
 Summary: NethServer web access statistics for Enterprise
 Name: nethserver-lightsquid-enterprise
-Version: 1.0.4
+Version: 1.1.0
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -40,6 +40,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 
 %changelog
+* Wed Nov 11 2015 Stefano Fancello <stefano.fancello@nethesis.it> - 1.1.0-1
+- Changed colors. Refs #3878
+- hide real username and group. Refs #3878
+- use nethesis as default template. Refs #3878
+
 * Tue Mar 17 2015 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.0.3-1
 - Add lightsquid to backup-data - Enhancement #3001 [NethServer]
 
