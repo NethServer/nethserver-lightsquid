@@ -9,7 +9,6 @@ URL: https://dev.nethesis.it/projects/%{name}
 
 BuildRequires: nethserver-devtools
 
-AutoReq: no
 Requires: nethserver-httpd
 Requires: nethserver-squid
 Requires: lightsquid, lightsquid-apache
@@ -29,17 +28,15 @@ See: http://lightsquid.sourceforge.net/
 perl createlinks
 
 %install
-rm -rf $RPM_BUILD_ROOT
-(cd root   ; find . -depth -print | cpio -dump $RPM_BUILD_ROOT)
+rm -rf %{buildroot}
+(cd root; find . -depth -print | cpio -dump %{buildroot})
+%{genfilelist} %{buildroot} > %{name}-%{version}-filelist
 
-%{genfilelist} $RPM_BUILD_ROOT > e-smith-%{version}-filelist
-echo "%doc COPYING"          >> e-smith-%{version}-filelist
 
-%clean 
-rm -rf $RPM_BUILD_ROOT
-
-%files -f e-smith-%{version}-filelist
-%defattr(-,root,root)
+%files -f %{name}-%{version}-filelist
+%defattr(-,root,root
+%dir %{_nseventsdir}/%{name}-update
+%doc COPYING
 
 %changelog
 * Tue Mar 17 2015 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.0.3-1
