@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<!-- LightSquid TPL v1.7 -->
+<html>
+<head>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="generator" content="LightSquid - http://lightsquid.sf.net">
+  <meta http-equiv="Content-Type" content="text/html; charset=##MSG_CODEPAGE##">
+  ##META##
+  <meta charset="##MSG_CODEPAGE##">
+  <title>LightSquid :: Day detail - Group Mode</title>
+  <link rel="stylesheet" href="get.cgi?css=main">
+</head>
+
+<body>
+  <div class="head">##MSG_TOP_SITES##</div>
+  <div class="main">
+    <div class="caption">
+        <!-- <div>
+          <a href="index.cgi">##MSG_HEADER##</a>
+        </div> -->
+        <div class="period">
+          ##MSG_WORK_PERIOD##: ##DATE##
+        </div>
+    </div>
+
+<!--  <table>
+    <tbody>
+<!-- HIDE dayinfo start-->
+       <tr>
+    <td colspan="11"><a href="##TOPSITESURL_L##">##TOPSITESURL_B##</a> ##MSG_REPORT##</td>
+ </tr>
+ <tr>
+    <td colspan="11"><a href="##BIGFILESURL_L##">##BIGFILESURL_B##</a> ##MSG_REPORT##</td>
+ </tr>
+<!-- HIDE dayinfo end -->  
+    </tbody>
+  </table>-->
+
+    <table class="stats">
+      <tbody>
+        <tr>
+          <th>##MSG_NUM##</th>
+<!-- HIDE timereport start-->
+          <th>##MSG_TIME_REPORT##</th>
+<!-- HIDE timereport end-->
+          <th>##MSG_USER##</th>
+<!-- HIDE realname start-->
+          <th>##MSG_REALNAME##</th>
+<!-- HIDE realname end-->
+          <th>##MSG_CONNECT##</th>
+          <th>##MSG_BYTES##</th>
+          <th>%</th>
+        </tr>
+
+<!-- [[ groupstart start-->
+        <tr>
+          <td colspan="7"><a name="##GROUPSTARTURL_L##">##GROUPSTARTURL_B##</a></td>
+        </tr>
+<!-- ]] groupstart end-->
+
+<!-- [[ user start-->
+        <tr ##ROWATTR##>
+          <td>##USERNUM##</td>
+<!-- HIDE timereport start-->
+  <td><a href="##TIMEURL_L##"><img src="get.cgi?png=datetime" border="0" title="Graph Report"></a></td>
+<!-- HIDE timereport end-->
+  <td><a href="##USERURL_L##">##USERURL_B##</a></td>
+<!-- HIDE realname start-->
+          <td>##REALNAME##</td>
+<!-- HIDE realname end-->		  
+          <td class="numeric">##USERCONNECT##</td>
+          <td class="numeric">##USERBYTES##</td>
+          <td class="numeric">##USERPERCENT##%</td>
+        </tr>
+<!-- ]] user end-->
+
+<!-- [[ groupend start-->
+        <tr>
+          <td colspan="3"></td>
+<!-- HIDE timereport start-->
+          <td></td>
+<!-- HIDE timereport end-->
+<!-- HIDE realname start-->
+          <td></td>
+<!-- HIDE realname end-->
+          <td>##GROUPENDBYTES##</td>
+          <td>##GROUPENDPERCENT##%</td>
+        </tr>
+<!-- ]] groupend end-->
+
+      </tbody>
+    </table>
+         
+	<!-- Rigth Column -->
+  <table class="stats">
+    <tbody>
+      <tr>
+        <td>##MSG_NUM##</td>
+        <td>##MSG_GROUP##</td>
+        <td>##MSG_BYTES##</td>
+        <td>%</td>
+      </tr>
+
+      <tr>
+        <td></td>
+      </tr>
+
+<!-- [[ grouplist start-->
+<tr ##GROUPROWATTR##>
+        <td>##GROUPLISTNUM##</td>
+        <td><a href="##GROUPLISTNAMEURL_L##">##GROUPLISTNAMEURL_B##</a></td>
+        <td class="numeric">##GROUPLISTBYTES##</td>
+        <td class="numeric" >##GROUPLISTPERCENT##</td>
+      </tr>
+<!-- ]] grouplist end-->
+
+</tbody>
+</table>
+  </div>
+</body>
+</html>

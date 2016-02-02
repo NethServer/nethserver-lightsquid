@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<!-- LightSquid TPL v1.7 -->
+<html>
+<head>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="generator" content="LightSquid - http://lightsquid.sf.net">
+  <meta http-equiv="Content-Type" content="text/html; charset=##MSG_CODEPAGE##">
+  ##META##
+  <title>LightSquid :: Who Use Site report</title>
+  <link rel="stylesheet" href="get.cgi?css=main">
+</head>
+
+<body>
+  <div class="head">Visitatori del sito</div>
+<div class="main">
+  <table class="stats">
+    <tbody>
+      <tr>
+        <td colspan="2" align="center" class="head" >##SITE##</td>
+      </tr>
+      <tr>
+        <td>##MSG_WORK_PERIOD##:</td> <td>##DATE##</td>
+      </tr>
+    </tbody>
+  </table>  
+
+  <table class="stats">
+    <tbody>
+      <tr>
+        <th align="left" >##MSG_USER##</th>
+<!-- HIDE realname start-->
+          <th>##MSG_REALNAME##</th>
+<!-- HIDE realname end-->
+          <th>##MSG_CONNECT##</th>
+          <th>##MSG_SIZE##</th>
+          <!-- HIDE daylist start -->
+          <th>##MSG_DAYLIST##</th>
+          <!-- HIDE daylist end -->
+        </tr>
+      <!-- [[ who start-->
+        <tr ##ROWATTR##>
+          <td align="left" >##WHOUSER##</td>
+<!-- HIDE realname start-->
+          <td align="right" nowrap="true">##REALNAME##</td>
+<!-- HIDE realname end-->
+          <td align="right">##WHOCONNECT##</td>
+          <td align="right">##WHOSIZE##</td>
+          <!-- HIDE daylist start -->
+          <td align="right"><A HREF="##USEDAYURL_L##">##USEDAYURL_B##</A></td>
+          <!-- HIDE daylist end -->
+        </tr>
+<!-- ]] who end-->
+	<tr>
+	<td style="border: 0px">&nbsp</td>
+	</tr>
+        <tr>
+          <th align="left">##MSG_TOTAL##</th>
+<!-- HIDE realname start-->
+          <td>&nbsp</td>
+<!-- HIDE realname end-->
+          <th align="right">##TOTALCONNECT##</th>
+          <th align="right">##TOTAL##</th>
+          <!-- HIDE daylist start -->
+          <th></th>
+          <!-- HIDE daylist end -->
+        </tr>
+      </tbody>
+    </table>
+
+ 
+      </tr>
+    </tbody>
+  </table>
+
+</div>
+</body>
+
+</html>

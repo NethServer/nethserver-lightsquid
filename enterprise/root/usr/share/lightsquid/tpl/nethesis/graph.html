@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- LightSquid TPL v1.7 -->
+<html>
+<head>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="generator" content="LightSquid - http://lightsquid.sf.net">
+  <meta charset="##MSG_CODEPAGE##">
+  ##META##
+  <link rel="stylesheet" href="get.cgi?css=main">
+  <title>LightSquid :: Graphics</title>
+</head>
+
+<body>
+  <div class="head">Rapporto accesso utenti Squid</div>
+  <div class="main">
+    <div class="caption">
+        <!--<div>
+          <a href="index.cgi">##MSG_HEADER##</a>
+        </div> -->
+        <div class="period">
+          ##MSG_WORK_PERIOD##: ##WORKPERIOD## ##MODE##
+        </div>
+    </div>
+
+    <table style="margin-top: 3em; display:inline-block; vertical-align:middle;" >
+      <tbody>
+      	<tr>
+         <td> 
+	        <img src="##GRAPHICSURL##" title="Graphics" usemap="#bars">
+		<map name="bars">
+<!-- [[ imagemap start-->		
+  		    <area href="##MAPURL##" shape="rect" coords="##MAPCOORD##">
+<!-- ]] imagemap end-->		
+		</map>
+	   </td>
+	</tr>
+	
+      </tbody>
+    </table>
+<!-- HIDE warning start -->
+  ##MSG_WARNING##, ##MSG_RECOMENDATION## $##VARNAME##=##VARVALUE##*(1024*1024*1024);
+<!-- HIDE warning end -->
+  </div>
+</body>
+</html>

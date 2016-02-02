@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<!-- LightSquid TPL v1.7 -->
+<html>
+<head>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="generator" content="LightSquid - http://lightsquid.sf.net">
+  <meta charset="##MSG_CODEPAGE##">
+  ##META##
+  <title>LightSquid :: Day detail</title>
+  <link rel="stylesheet" href="get.cgi?css=main">
+</head>
+
+<body>
+  <div class="head">Traffico Giornaliero</div>
+  <div class="main">
+    <div class="caption">
+        <!--<div>
+          <a href="index.cgi">##MSG_HEADER##</a>
+        </div> -->
+        <div class="period">
+          ##MSG_DATE##: ##DATE##
+        </div>
+    </div>
+
+    <table class="stats">
+      <tbody>
+        <tr>
+          <td colspan="11"><a href="##TOPSITESURL_L##">##TOPSITESURL_B##</a> ##MSG_REPORT##</td>
+        </tr>
+
+        <tr>
+          <td colspan="11"><a href="##BIGFILESURL_L##">##BIGFILESURL_B##</a> ##MSG_REPORT##</td>
+        </tr>
+
+<!-- HIDE overuser start-->		  
+        <tr>
+          <td colspan="11">##OVERMSG##</td>
+        </tr>
+<!-- HIDE overuser end-->		  
+
+        <tr>
+          <th>##MSG_NUM##</th>
+<!-- HIDE timereport start-->		  
+          <th>##MSG_TIME_REPORT##</th>
+<!-- HIDE timereport end-->		  
+          <th>##MSG_USER##</th>
+<!-- HIDE realname start-->		  
+          <th>##MSG_REALNAME##</th>
+<!-- HIDE realname end-->		  
+          <th>##MSG_CONNECT##</th>
+<!-- HIDE putpost start-->		  
+          <th>##MSG_PUTPOST##</th>
+<!-- HIDE putpost end-->		  
+          <th>##MSG_BYTES##</th>
+          <th>%</th>
+<!-- HIDE group start -->
+          <th>##MSG_GROUP##</th>
+<!-- HIDE group end -->
+        </tr>
+
+<!-- VARIABLE !putpostnormalattr  color="black" -->
+<!-- VARIABLE !putpostwarningattr color="red"   -->
+
+<!-- VARIABLE putpostnormalattr  </> -->
+<!-- VARIABLE putpostwarningattr <img src="get.cgi?png=flag_red" title="Graph Report">  -->
+
+<!-- [[ user start-->
+        <tr ##ROWATTR##>
+          <td>##USERNUM##</td>
+<!-- HIDE timereport start-->		  
+<td><a href="##TIMEURL_L##"><img src="get.cgi?png=datetime" title="Graph Report"></a></td>
+<!-- HIDE timereport end-->		  
+          <td><a href="##USERURL_L##">##USERURL_B##</a></td>
+<!-- HIDE realname start-->		  
+          <td>##REALNAME##</td>
+<!-- HIDE realname end-->		  
+          <td class="numeric">##USERCONNECT##</td>
+<!-- HIDE putpost start-->		  
+          <td class="numeric">##USERPUTPOST####OVERPUTPOSTATTR##</td>
+<!-- HIDE putpost end-->		  
+          <td class="numeric">##USERBYTES##</td>
+          <td class="numeric">##USERPERCENT##%</td>
+<!-- HIDE group start -->
+          <td><a href="##USERGROUPURL_L##">##USERGROUPURL_B##</a></td>
+<!-- HIDE group end -->
+        </tr>
+<!-- ]] user end-->
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

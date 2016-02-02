@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<!-- LightSquid TPL v1.7 -->
+<html>
+<head>
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="generator" content="LightSquid - http://lightsquid.sf.net">
+  <meta charset="##MSG_CODEPAGE##">
+  ##META##
+  <title>LightSquid :: Top Site</title>
+  <link rel="stylesheet" href="get.cgi?css=main">
+</head>
+
+<body>
+  <div class="head">##MSG_TOP_SITES##</div>
+  <div class="main">
+    <div class="caption">
+        <!--<div>
+          <a href="index.cgi">##MSG_HEADER##</a>
+        </div> -->
+        <div class="period">
+          ##MSG_WORK_PERIOD##: ##DATE##
+        </div>
+    </div>
+
+    <table class="stats">
+      <tbody>
+<!-- VARIABLE selectedattr bgcolor="#FFD700" -->
+        <tr>
+          <th></th>
+          <th></th>
+          <th>##MSG_ACCESSED_SITE##</th>
+          <th ##SORTCONNECTATTR##><a href="##SORTCONNECTURL_L##">##SORTCONNECTURL_B##</a></th>
+          <th ##SORTBYTESATTR##><a href="##SORTBYTESURL_L##">##SORTBYTESURL_B##</a></th>
+          <th>%</th>
+        </tr>
+	
+<!-- [[ site start-->
+        <tr ##ROWATTR##>
+          <td>##SITENUM##</td>
+          <td><a href="##SITEURLWHO_L##">##SITEURLWHO_B##</a></td>
+          <td><a href="##SITEURL_L##">##SITEURL_B##</a></td>
+          <td class="numeric">##SITECONNECT##</td>
+          <td class="numeric">##SITEBYTES##</td>
+          <td class="numeric">##SITEPERCENT##%</td>
+        </tr>
+<!-- ]] site end-->
+        <tr>
+          <th colspan="4" align="left">##MSG_TOTAL##</td>
+          <th class="numeric">##TOTAL##</td>
+          <th></th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>

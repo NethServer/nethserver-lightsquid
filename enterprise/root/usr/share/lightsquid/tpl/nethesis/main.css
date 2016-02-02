@@ -1,0 +1,95 @@
+
+html {
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans;
+  font-size: 12px;
+  margin: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: black;
+  text-decoration: underline;
+}
+
+a:visited{
+  text-decoration: none;
+  color: #363636;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table tr td {
+  padding: 3px;
+  border: 1px solid #aaa;
+}
+
+table tr th {
+  background-color: #95a8ad;
+  border: 1px solid #aaa;
+  font-weight: bold;
+}
+
+table tr td.numeric {
+  text-align: right;
+}
+
+
+.head {
+  margin: 0 9%;
+  font-size: 24px;
+  font-weight: bold;
+  color: #525252;
+}
+
+.main {
+  margin: 0 9%;
+  overflow: hidden;
+  padding: 1em;
+}
+
+.caption {
+  float: left;
+  clear: left;
+}
+
+table.year {
+  float: left;
+  clear: left;
+  margin-top: 1em;
+  font-size: 20px;
+}
+
+table.top {
+  float: right;
+  margin-top: 2em;
+}
+
+table.stats {
+  float: left;
+  clear: left;
+  margin-top: 2em;
+  width: 100%;
+}
+
+table.stats tr:nth-child(2n+1) {
+  background-color: #c9dce1;
+}
+
+table.stats tr:last-child {
+  background-color: #95a8ad;
+}
+
+.period {
+  text-decoration: underline;
+}
