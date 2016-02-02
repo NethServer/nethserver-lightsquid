@@ -34,6 +34,7 @@ event_actions($event, qw(
 ));
 templates2events("/etc/httpd/conf.d/lightsquid.conf",  $event);
 templates2events("/etc/httpd/admin-conf.d/lightsquid.conf",  $event);
+templates2events("/etc/lightsquid/lightsquid.cfg",  $event);
 event_services($event, 'httpd' => 'reload');
 
 exit;
