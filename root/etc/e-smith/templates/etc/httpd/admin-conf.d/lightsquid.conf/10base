@@ -1,0 +1,17 @@
+{
+    # no lightsquid variable prefilled because the minus character
+    use esmith::ConfigDB;
+    use esmith::util;
+    my $confdb = esmith::ConfigDB->open;
+    my $lightsquid = $confdb->get('lightsquid') or die "No lightsquid db entry found\n";
+    my $alias = $lightsquid->prop('alias') || "";
+
+    # initialize alias if needed
+    if ($alias eq "") {
+        $alias = esmith::util::genRandomHash();
+        $confdb->set_prop('lightsquid','alias',$alias);
+    }
+
+    $OUT .= "ProxyPass /$alias http://localhost/$alias\n";
+    $OUT .= "ProxyPassReverse /$alias http://localhost/$alias\n";
+}

@@ -25,6 +25,7 @@ Alias /$alias /usr/share/lightsquid/cgi
     Options ExecCGI
     AddHandler cgi-script .cgi
     AllowOverride None
+    Require local
 </Directory>
 
 ";
