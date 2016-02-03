@@ -33,7 +33,7 @@ class Lightsquid extends \Nethgui\Controller\CompositeController
 
     protected function initializeAttributes(\Nethgui\Module\ModuleAttributesInterface $base)
     {
-        return \Nethgui\Module\SimpleModuleAttributesProvider::extendModuleAttributes($base, 'Status');
+        return \Nethgui\Module\SimpleModuleAttributesProvider::extendModuleAttributes($base, 'Report');
     }
 
     public function initialize()
