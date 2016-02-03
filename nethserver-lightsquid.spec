@@ -25,6 +25,7 @@ See: http://lightsquid.sourceforge.net/
 %preun
 
 %build
+%{makedocs}
 perl createlinks
 
 %install
