@@ -118,14 +118,22 @@ $userealname         = 0;
 
 #if url size exceed $bigfilelimit - add this file into report
 {
-   my $bigfilelimitOpt = $lightsquid{'BigFileLimit'} || '10*1024*1024';
-   $OUT .= "\$bigfilelimit = $bigfilelimitOpt;\n";
+   my $bigfilelimitOpt = $lightsquid{'BigFileLimit'} || '10';
+   if ($bigfilelimitOpt =~ /\*/ ) { # backward compatibility: the value was expressed as multiplcation
+       $OUT .= "\$bigfilelimit = $bigfilelimitOpt;\n";
+   } else {
+       $OUT .= "\$bigfilelimit = ".($bigfilelimitOpt*1024*1024).";\n";
+   }
 }
 
 #user maximum size per day limit (oversize)
 {
-   my $perusertrafficlimitOpt = $lightsquid{'PerUserTrafficLimit'} || '100*1024*1024';
-   $OUT .= "\$perusertrafficlimit = $perusertrafficlimitOpt;\n";
+   my $perusertrafficlimitOpt = $lightsquid{'PerUserTrafficLimit'} || '100';
+   if ($perusertrafficlimitOpt =~ /\*/ ) { # backward compatibility: the value was expressed as multiplcation
+       $OUT .= "\$perusertrafficlimit = $perusertrafficlimitOpt;\n";
+   } else {
+       $OUT .= "\$perusertrafficlimit = ".($perusertrafficlimitOpt*1024*1024).";\n";
+   }
 }
 
 # weekend display mode
