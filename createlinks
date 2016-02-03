@@ -37,4 +37,14 @@ templates2events("/etc/httpd/admin-conf.d/lightsquid.conf",  $event);
 templates2events("/etc/lightsquid/lightsquid.cfg",  $event);
 event_services($event, 'httpd' => 'reload');
 
+
+#--------------------------------------------------
+# actions for nethserver-ligthsquid-save event
+#--------------------------------------------------
+
+$event = "nethserver-ligthsquid-save";
+
+templates2events("/etc/lightsquid/lightsquid.cfg",  $event);
+
+
 exit;

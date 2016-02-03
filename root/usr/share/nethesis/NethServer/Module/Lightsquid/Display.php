@@ -1,6 +1,6 @@
 <?php
 
-namespace NethServer\Module;
+namespace NethServer\Module\Lightsquid;
 
 /*
  * Copyright (C) 2011 Nethesis S.r.l.
@@ -28,18 +28,14 @@ use Nethgui\System\PlatformInterface as Validate;
  *
  * @author Giacomo Sanchietti<giacomo.sanchietti@nethesis.it>
  */
-class Lightsquid extends \Nethgui\Controller\CompositeController
+class Display extends \Nethgui\Controller\AbstractController
 {
 
-    protected function initializeAttributes(\Nethgui\Module\ModuleAttributesInterface $base)
+    public function prepareView(\Nethgui\View\ViewInterface $view)
     {
-        return \Nethgui\Module\SimpleModuleAttributesProvider::extendModuleAttributes($base, 'Status');
+        parent::prepareView($view);
+        $cweb = $this->getPlatform()->getDatabase('configuration')->getKey('lightsquid');
+        $host = explode(':',$_SERVER['HTTP_HOST']);
+        $view['url'] = "/".$cweb['alias'];
     }
-
-    public function initialize()
-    {
-        parent::initialize();
-        $this->loadChildrenDirectory();
-    }
-
 }
