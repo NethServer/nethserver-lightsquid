@@ -35,7 +35,7 @@ rm -rf %{buildroot}
 
 
 %files -f %{name}-%{version}-filelist
-%defattr(-,root,root
+%defattr(-,root,root,-)
 %dir %{_nseventsdir}/%{name}-update
 %doc COPYING
 
