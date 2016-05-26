@@ -1,6 +1,6 @@
 Summary: NethServer web access statistics
 Name: nethserver-lightsquid
-Version: 1.0.3
+Version: 1.0.4
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -42,6 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 
 %changelog
+* Thu May 26 2016 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.0.4-1
+- Access to graphs and reports from trusted network - Bug #3370 [NethServer]
+
 * Tue Mar 17 2015 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.0.3-1
 - Add lightsquid to backup-data - Enhancement #3001 [NethServer]
 
