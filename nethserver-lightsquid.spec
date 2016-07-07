@@ -1,6 +1,6 @@
 Summary: NethServer web access statistics
 Name: nethserver-lightsquid
-Version: 1.0.3
+Version: 1.1.0
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -40,6 +40,9 @@ rm -rf %{buildroot}
 %doc COPYING
 
 %changelog
+* Thu Jul 07 2016 Stefano Fancello <stefano.fancello@nethesis.it> - 1.1.0-1
+- First NS7 release
+
 * Tue Mar 17 2015 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.0.3-1
 - Add lightsquid to backup-data - Enhancement #3001 [NethServer]
 
