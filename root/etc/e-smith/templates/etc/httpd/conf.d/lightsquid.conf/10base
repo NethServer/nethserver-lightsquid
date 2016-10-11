@@ -1,5 +1,4 @@
 {
-    # no collectd-web variable prefilled because the minus character
     use esmith::ConfigDB;
     use esmith::util;
     my $confdb = esmith::ConfigDB->open;
@@ -18,7 +17,6 @@
        $allowHosts =~ s/,/ /g;
        # Make sure that /32 ValidFrom specs don't cause Apache problems.
        $allowHosts =~ s:/255.255.255.255::g;
-       $allowHosts = "Order deny,allow\n    Deny from all\n    Allow from $allowHosts";
     }
 
     $OUT = "
@@ -33,7 +31,9 @@ Alias /$alias /usr/share/lightsquid/cgi
     Options ExecCGI
     AddHandler cgi-script .cgi
     AllowOverride None
-    $allowHosts
+    Order deny,allow
+    Deny from all
+    Allow from localhost $allowHosts
 </Directory>
 
 ";

@@ -38,7 +38,7 @@ class Lightsquid extends \Nethgui\Module\AbstractModule implements \NethServer\M
          $cweb = $this->getPlatform()->getDatabase('configuration')->getKey('lightsquid');
          $host = explode(':',$_SERVER['HTTP_HOST']);
          return array(
-            'url' => "http://".$host[0]."/".$cweb['alias']."/"
+            'url' => "/".$cweb['alias']."/"
          );
     } 
 }
