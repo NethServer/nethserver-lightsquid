@@ -1,6 +1,6 @@
 Summary: NethServer web access statistics
 Name: nethserver-lightsquid
-Version: 1.0.5
+Version: 1.0.6
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -42,6 +42,9 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(-,root,root)
 
 %changelog
+* Fri Oct 14 2016 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.0.6-1
+- Backport CGP and lightsquid access on port 980 - Enhancement #3426 [NethServer 6]
+
 * Thu Jun 09 2016 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.0.5-1
 - Syntax error in cgp and collectd-web httpd conf - Bug #3402 [NethServer]
 
