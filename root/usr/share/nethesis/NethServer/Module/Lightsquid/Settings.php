@@ -56,7 +56,7 @@ class Settings extends \Nethgui\Controller\AbstractController
 
     protected function onParametersSaved($changes)
     {
-        $this->getPlatform()->signalEvent('nethserver-ligthsquid-save');
+        $this->getPlatform()->signalEvent('nethserver-lightsquid-save');
     }
 
 
