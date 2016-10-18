@@ -23,7 +23,7 @@ use esmith::Build::CreateLinks  qw(:all);
 
 
 #--------------------------------------------------
-# actions for nethserver-ligthsquid-update event
+# actions for nethserver-lightsquid-update event
 #--------------------------------------------------
 
 my $event = "nethserver-lightsquid-update";
@@ -39,10 +39,10 @@ event_services($event, 'httpd' => 'reload');
 
 
 #--------------------------------------------------
-# actions for nethserver-ligthsquid-save event
+# actions for nethserver-lightsquid-save event
 #--------------------------------------------------
 
-$event = "nethserver-ligthsquid-save";
+$event = "nethserver-lightsquid-save";
 
 templates2events("/etc/lightsquid/lightsquid.cfg",  $event);
 
