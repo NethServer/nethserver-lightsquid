@@ -1,6 +1,6 @@
 Summary: NethServer web access statistics
 Name: nethserver-lightsquid
-Version: 1.1.1
+Version: 1.1.2
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -40,6 +40,9 @@ rm -rf %{buildroot}
 %doc COPYING
 
 %changelog
+* Wed Jan 11 2017 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.1.2-1
+- httpd-admin: use KillMode=process - NethServer/dev#5190
+
 * Tue Sep 06 2016 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.1.1-1
 - Backup data: some files not included in backup - Bug NethServer/dev#5101
 
