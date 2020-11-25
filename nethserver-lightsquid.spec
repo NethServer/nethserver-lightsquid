@@ -12,6 +12,7 @@ BuildRequires: nethserver-devtools
 Requires: nethserver-httpd
 Requires: nethserver-squid
 Requires: lightsquid, lightsquid-apache
+Requires: nethserver-httpd-admin-service
 
 %description
 NethServer web access statistics
