@@ -1,6 +1,6 @@
 Summary: NethServer web access statistics
 Name: nethserver-lightsquid
-Version: 1.1.2
+Version: 1.2.0
 Release: 1%{?dist}
 License: GPL
 Source: %{name}-%{version}.tar.gz
@@ -41,6 +41,9 @@ rm -rf %{buildroot}
 %doc COPYING
 
 %changelog
+* Wed Nov 25 2020 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.2.0-1
+- Access web applications from port 980 - NethServer/dev#6344
+
 * Wed Jan 11 2017 Giacomo Sanchietti <giacomo.sanchietti@nethesis.it> - 1.1.2-1
 - httpd-admin: use KillMode=process - NethServer/dev#5190
 
